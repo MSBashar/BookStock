@@ -11,10 +11,10 @@
 BookStock is a Laravel-based web application designed to manage a library's book inventory. It supports user roles (Admin, Editor, Guest) and provides full CRUD functionality for books, categories, and authors.
 
 ## 🛠️ Technical Implementation
-* **Framework:** Laravel 10.x / 11.x
+* **Framework:** Laravel 12.x
 * **Database:** MySQL
 * **Query Engine:** Laravel Query Builder (`DB` Facade) - *Eloquent ORM is intentionally not used as per project constraints.*
-* **Frontend:** Laravel Blade with Tailwind CSS / Bootstrap.
+* **Frontend:** Laravel Blade with Tailwind CSS.
 * **Storage:** Laravel File Storage with Symbolic Linking.
 
 ## 📋 Features
