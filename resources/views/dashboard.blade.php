@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <x-slot name="sub_header">
-        <p class="text-gray-600 dark:text-gray-400 ">Welcome back, {{ Auth::user()->name }}!</p>
+        <p class="text-gray-600 dark:text-gray-400 ">{{ __('Welcome back') }}, {{ __(Auth::user()->name) }}</p>
     </x-slot>
 
     
