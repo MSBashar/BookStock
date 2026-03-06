@@ -1,13 +1,20 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Edit Profile') }}
-        </h2>
-    </x-slot>
-    <x-slot name="sub_header">
-        <p class="text-gray-600 dark:text-gray-400 ">{{ __('Update your personal information') }}</p>
-    </x-slot>
+@extends('layouts.app')
 
+@section('title')
+    {{ __('Edit Profile') }}
+@endsection
+
+@section('header')
+    <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        {{ __('Edit Profile') }}
+    </h2>
+@endsection
+
+@section('sub_header')
+    <p class="text-gray-600 dark:text-gray-400 ">{{ __('Update your personal information') }}</p>
+@endsection
+
+@section('content')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
@@ -29,4 +36,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

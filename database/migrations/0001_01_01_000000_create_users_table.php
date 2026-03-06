@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->integer('active')->default(1); // -- 1 for active, 0 for inactive
             $table->timestamps();
         });
 
@@ -35,6 +36,35 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        // Schema::create('roles', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name', 50)->unique(); // -- e.g., 'Admin', 'Editor', 'Guest'
+        //     $table->text('description')->nullable();
+        //     $table->timestamps();
+        // });
+
+        // Schema::create('permissions', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name', 50)->unique(); // -- e.g., 'read_content', 'edit_content', 'delete_content', 'manage_users'
+        //     $table->text('description')->nullable();
+        //     $table->timestamps();
+        // });
+
+        // Schema::create('user_roles', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        //     $table->foreignId('role_id')->constrained()->onDelete('cascade');
+        //     $table->primary(['user_id', 'role_id']);
+        // });
+
+        // Schema::create('role_permissions', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('role_id')->constrained()->onDelete('cascade');
+        //     $table->foreignId('permission_id')->constrained()->onDelete('cascade');
+        //     $table->primary(['role_id', 'permission_id']);
+        // });
+
     }
 
     /**
