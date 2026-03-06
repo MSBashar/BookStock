@@ -221,7 +221,11 @@
 
                         <a
                         href="{{ route('categories.index') }}"
-                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link"
+                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link
+                        @if (request()->routeIs('categories.index'))
+                            active
+                        @endif
+                        "
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +245,11 @@
                         </a>
                         <a
                         href="{{ route('authors.index') }}"
-                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link"
+                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link
+                        @if (request()->routeIs('authors.index'))
+                            active
+                        @endif
+                        "
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +269,11 @@
                         </a>
                         <a
                         href="{{ route('books.index') }}"
-                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link"
+                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link
+                        @if (request()->routeIs('books.index'))
+                            active
+                        @endif
+                        "
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +294,11 @@
 
                         <a
                         href="{{ route('profile.edit') }}"
-                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link"
+                        class="flex items-center space-x-3 p-3 rounded-lg sidebar-link
+                        @if (request()->routeIs('profile.edit'))
+                            active
+                        @endif
+                        "
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
